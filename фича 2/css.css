@@ -1,0 +1,64 @@
+body{
+    box-sizing: border-box;
+}
+.line-box{
+    width: 100px;
+    height: 100px;
+    background: #000;
+    transition: 1s;
+    text-align: right;
+    color: aqua;
+
+
+}
+.line-box>h1{
+    visibility: hidden;
+    transition: visibility 3s;
+}
+.line{
+    background: #ddd;
+    height: 20px;
+    width: 100px;
+    margin-bottom: 30px;
+    transition: 1s;
+    position: absolute;
+    z-index: 10;
+
+}
+.line-1{
+    transform: translateY(20px);
+
+}
+.line-2{
+  transform: translateY(60px);
+
+}
+.active{
+    transition: 1s;
+
+}
+.content{
+    background: #000;
+    transform: scale(0);
+    transform-origin: 0 0;
+    width: 1000px;
+    height: 1000px;
+    transition: 1s;
+}
+.active>.content{
+    transform: scale(1);
+    transition: 1s;
+
+}
+.active>h1{
+    visibility: visible;
+    transition: visibility 3s;
+
+}
+.active>.line-1{
+    transform: translateY(40px) rotate(45deg);
+}
+.active>.line-2{
+    transform: translateY(40px) rotate(-45deg);
+
+}
